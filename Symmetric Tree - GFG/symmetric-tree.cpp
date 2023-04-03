@@ -106,11 +106,7 @@ class Solution{
     {
 	    // Code here
 	    if(root == NULL)   return true;
-	   // else if(root->left == NULL or root->right==NULL) return false;
-	   // else if(root->left->data != root->right->data) return false;
-	   // return root->left and root->right;
-	   
-	   isSymmetric(root->left, root->right);
+	    isSymmetric(root->left, root->right);
     }
     bool isSymmetric(struct Node* r1, struct Node* r2)
     {
