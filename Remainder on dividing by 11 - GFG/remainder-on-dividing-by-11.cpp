@@ -17,14 +17,15 @@ public:
     {
        // code here
        int even=0, odd=0;
-       for(int i=0, j=1; i<x.size(), j<x.size(); i=i+2, j=j+2)
+       for(int i=0, j=1; i<x.size(), j<x.size(); i+=2, j+=2)
        {
-           even = even + x[i] - '0';
+           even =  even + x[i] - '0';
            odd = odd + x[j] - '0';
        }
        int rem = (odd-even)%11;
-       if(rem>=0)    return rem;
-       else return rem+11;
+       if(rem>=0)   return rem;
+       else return (rem+11);
+    
     }
 };
 
