@@ -44,22 +44,22 @@ class Solution
     vector<int> rightView(Node *root)
     {
        // Your Code here
-       vector<int> result;
-       queue<Node*> q;
+       vector<int> ans;
+       queue<Node *> q;
        q.push(root);
-       while(q.size()>0)
+       while(!q.empty())
        {
-           int count = q.size();
-           for(int i=0; i<count; i++)
+           int sz = q.size();
+           for(int i=1; i<=sz; i++)
            {
-           root = q.front();
-           q.pop();
-           if(i==0) result.push_back(root->data);
-           if(root->right != NULL)  q.push(root->right);
-           if(root->left != NULL)   q.push(root->left);
+               auto temp = q.front();
+               q.pop();
+               if(i==1) ans.push_back(temp->data);
+               if(temp->right)  q.push(temp->right);
+               if(temp->left)   q.push(temp->left);
            }
-       }
-       return   result;
+       }   
+           return ans;
     }
 };
 
