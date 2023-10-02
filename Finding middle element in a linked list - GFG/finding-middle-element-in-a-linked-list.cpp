@@ -42,9 +42,8 @@ class Solution{
     int getMiddle(Node *head)
     {
         // Your code here
-        if(head==NULL)  return -1;
-        Node *sp=head, *fp=head;
-        while(fp!=NULL and fp->next!=NULL)
+        Node* sp = head, *fp = head;
+        while(fp!= NULL and fp->next!= NULL)
         {
             sp = sp->next;
             fp = fp->next->next;
